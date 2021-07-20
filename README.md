@@ -4,7 +4,7 @@
 ## Configuration
 ### Installation
 
-Install frrouting from following under link:\
+Install frrouting from following link:\
 [http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html][http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html]
 ```
 $ git clone  https://gitlab.network.com/main/dynamic_routing.git
