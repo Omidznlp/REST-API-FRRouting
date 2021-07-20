@@ -46,9 +46,9 @@ Quit the server with CONTROL-C.
 ### Test
 ****` OSPF : ospf/README.md`**** \
 ****`Policy Routes : policyroutes/README.md`**** \
-****`BGP : bgp/README.md`****
-****`RIP: rip/README.md`****
-****`STATIC: static/README.md`****
+****`BGP : bgp/README.md`****\
+****`RIP: rip/README.md`****\
+****`STATIC: static/README.md`****\
 ### Write Configuration
 All commands are inserted into frr by methods which are written permanently. we can use following command into frr for this purpose.
 ```
