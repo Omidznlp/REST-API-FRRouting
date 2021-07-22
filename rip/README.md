@@ -3,7 +3,7 @@
 ## Configuration
 RIP daemon must be enabled before testing. To do that, `ripd=yes` must be inserted into `/etc/frr/daemons` and then restart frr \
 `Note:`\
-Implemented parameters are referred to in https://docs.frrouting.org/en/latest/ripd.html. 
+Implemented parameters are referred to https://docs.frrouting.org/en/latest/ripd.html. 
 ### Test Requests
 
 **Description:**\

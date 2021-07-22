@@ -3,7 +3,7 @@
 ## Configuration
 BGP daemon must be enabled before testing. To do , `bgpd=no` must be changed to `bgpd=yes` into `/etc/frr/daemons` and then restart frr \
 `Note:`\
-Implemented parameters are referred to in https://docs.frrouting.org/en/latest/bgp.html. 
+Implemented parameters are referred to https://docs.frrouting.org/en/latest/bgp.html. 
 Please note that some parameters should not be configured together. To address, if they are configured, one of them would be ignored when commands are inserted into Frr 
 ## Test
 BGP parameters are divided into three section:\

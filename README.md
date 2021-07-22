@@ -19,7 +19,8 @@ The other protocoles will be supportted in the future.
 #### Prerequisites
 
 Frrouting must be installed from following link:\
-http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html
+http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html . \
+And then
 ```
 $ git clone https://github.com/Omidznlp/REST-API-FRRouting.git
 $ cd REST-API-FRRouting

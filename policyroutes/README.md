@@ -3,6 +3,10 @@
 ## Configuration
 PBR daemon must be enabled before testing. To do that, `pbrd=yes` must be inserted into `/etc/frr/daemons` and then restart frr \
 `Note:`\
+`Note:`\
+Implemented parameters are referred to https://docs.frrouting.org/en/latest/pbr.html ,\
+https://docs.frrouting.org/en/latest/filter.html , \
+https://docs.frrouting.org/en/latest/routemap.html  
 Please note that some parameters should not be configured together. To address, if they are configured, one of them would be ignored when commands are inserted into Frr 
 ##Test
 Policy routes are divided to four section:\
