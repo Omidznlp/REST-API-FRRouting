@@ -12,7 +12,7 @@ ospfd_instances=1,2,3
 `Note:`\
 Implemented parameters are referred to in https://docs.frrouting.org/en/latest/ospfd.html. \
 For supporting multi-instance, please check the following link:
-[https://frrouting.readthedocs.io/en/latest/ospfd.html#multi-instance-support][https://frrouting.readthedocs.io/en/latest/ospfd.html#multi-instance-support]
+https://frrouting.readthedocs.io/en/latest/ospfd.html#multi-instance-support
 
 ### Test Requests
 

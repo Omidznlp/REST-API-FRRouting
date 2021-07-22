@@ -63,10 +63,29 @@ $./kill.sh <port number>
 **`BGP : bgp/README.md`**\
 **`RIP: rip/README.md`**\
 **`STATIC: static/README.md`**\
-**`PBR, Prefix-List, Access-List and Route-Map : policyroutes/README.md`**\
+**`PBR, Prefix-List, Access-List and Route-Map : policyroutes/README.md`**
 
 ### Write Configuration
-REST API methodes write current configuration to configuration file.
+REST API methodes write current configuration to configuration file.\
 **Note:**\
-All requests insert some commands into `Frrouting`. Moreover, We had better to make sure which it is inserted into Frrouting. To address, We can check result of requests by following "show running-config" command into Frrouting
-to approve functionally of REST API.
+All REST APIs methods insert some commands into `FRRouting`. Moreover, We had better make sure that they are inserted into it. To address, We can check the result of requests by running "show running-config" command in the following manner
+to approve the functionally of REST APIs.
+```
+$ sudo vtysh
+test# show running-config
+Building configuration...
+
+Current configuration:
+!
+frr version 7.3.1-MyOwnFRRVersion
+frr defaults traditional
+hostname test
+log syslog informational
+no ip forwarding
+no ipv6 forwarding
+service integrated-vtysh-config
+!
+line vty
+!
+end
+```
