@@ -10,7 +10,7 @@ This project is implemented to add REST API to FRRouting. Moreover, This version
 **`STATIC`**\
 **`Policy Based Routing`** \
 **`Prefix-List`** \
-**`Access-List`** \  
+**`Access-List`**   
 **`Route-Map`** \
 The other protocoles will be supportted in the future.
 
@@ -19,7 +19,7 @@ The other protocoles will be supportted in the future.
 #### Prerequisites
 
 Frrouting must be installed from following link:\
-[http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html][http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html]
+http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html
 ```
 $ git clone https://github.com/Omidznlp/REST-API-FRRouting.git
 $ cd REST-API-FRRouting
@@ -70,7 +70,3 @@ REST API methodes write current configuration to configuration file.
 **Note:**\
 All requests insert some commands into `Frrouting`. Moreover, We had better to make sure which it is inserted into Frrouting. To address, We can check result of requests by following "show running-config" command into Frrouting
 to approve functionally of REST API.
-``` 
-[http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html]: http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html
-
-```
