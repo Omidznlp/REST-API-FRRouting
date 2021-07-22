@@ -1,33 +1,41 @@
 
-# Configuration, RUN and Test Web-UI
+# Configuration, RUN and Test REST API
+# Description 
+FRRouting (FRR) is a free and open source Internet routing protocol suite for Linux and Unix platforms. It implements BGP, OSPF, RIP, IS-IS, PIM, LDP, BFD, Babel, PBR, OpenFabric and VRRP, with alpha support for EIGRP and NHRP https://frrouting.org/ . 
 
-## Configuration
-### Installation
+This project is implemented to add REST API to FRRouting. Moreover, This version supports some protocoles such as:\
+**`OSPF`**\
+**`BGP `**\
+**`RIP`**\
+**`STATIC`**\
+**`Policy Based Routing`** \
+**`Prefix-List`** \
+**`Access-List`** \  
+**`Route-Map`** \
+The other protocoles will be supportted in the future.
 
-Install frrouting from following link:\
+### Install
+
+#### Prerequisites
+
+Frrouting must be installed from following link:\
 [http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html][http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html]
 ```
-$ git clone  https://gitlab.network.com/main/dynamic_routing.git
-$ cd dynamic_routing
-$ cd web-ui
+$ git clone https://github.com/Omidznlp/REST-API-FRRouting.git
+$ cd REST-API-FRRouting
 $ sudo python3.8 manage.py makemigrations
 $ sudo python3.8 manage.py createsuperuser --email admin@example.com --username admin
 $ sudo python3.8 manage.py migrate
 $ ./setup.sh
 ```
-### RUN
-Run server
+### RUN and STOP
+
+#### Run server
 
 ```
 $ ./startup.sh <port number>
 ```
-
-Kill server
-
-```
-$./kill.sh <port number>
-```
-Exp 1:
+Exp:
 
 ```
 $ ./startup.sh 8000
@@ -43,17 +51,26 @@ Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
 ```
-### Test
-****` OSPF : ospf/README.md`**** \
-****`Policy Routes : policyroutes/README.md`**** \
-****`BGP : bgp/README.md`****\
-****`RIP: rip/README.md`****\
-****`STATIC: static/README.md`****
-### Write Configuration
-All commands are inserted into frr by methods which are written permanently. we can use following command into frr for this purpose.
-```
-sudo vtysh
 
-test# write
+#### Kill server
+
+```
+$./kill.sh <port number>
+```
+
+### Test
+**` OSPF : ospf/README.md`**\
+**`BGP : bgp/README.md`**\
+**`RIP: rip/README.md`**\
+**`STATIC: static/README.md`**\
+**`PBR, Prefix-List, Access-List and Route-Map : policyroutes/README.md`**\
+
+### Write Configuration
+REST API methodes write current configuration to configuration file.
+**Note:**\
+All requests insert some commands into `Frrouting`. Moreover, We had better to make sure which it is inserted into Frrouting. To address, We can check result of requests by following "show running-config" command into Frrouting
+to approve functionally of REST API.
 ``` 
 [http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html]: http://docs.frrouting.org/projects/dev-guide/en/latest/building-frr-for-ubuntu2004.html
+
+```

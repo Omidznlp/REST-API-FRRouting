@@ -11,9 +11,6 @@ Base urls in this project are based on two types : \
 `2.http://localhost:8000/rip/advanced/` \
 `/basic` must be configured to run rip instances \
 `/advanced` is optional \
-**Note:**\
-All requests insert some commands into `Frrouting`. Moreover, We had better to make sure which it is inserted into Frrouting. To address, We can check result of requests by following "show running-config" command into Frrouting
-to approve functionally of REST API
 
 #### Basic Commands Section
 Exp1: Insert

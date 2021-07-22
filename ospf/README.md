@@ -2,9 +2,16 @@
 # Configuration, and Test OSPF
 
 ## Configuration
-### Installation
-
-For supporting Multi-instance, follow under link:
+OSPF supports multiple instances.it must be enabled before testing. To do, `ospfd=no` must be changed in the following manner.  
+```
+...
+ospfd=yes
+ospfd_instances=1,2,3
+...
+```
+`Note:`\
+Implemented parameters are referred to in https://docs.frrouting.org/en/latest/ospfd.html. \
+For supporting multi-instance, please check the following link:
 [https://frrouting.readthedocs.io/en/latest/ospfd.html#multi-instance-support][https://frrouting.readthedocs.io/en/latest/ospfd.html#multi-instance-support]
 
 ### Test Requests
@@ -16,9 +23,6 @@ Base urls in this project are based on two types : \
 `2.http://localhost:8000/ospf/advanced/` \
 `/basic` must be configured to run ospf instances \
 `/advanced` is optional \
-**Note:**\
-All requests insert some commands into `Frrouting`. Moreover, We had better to make sure which it is inserted into Frrouting. To address, We can check result of requests by following "show running-config" command into Frrouting
-to approve functionally of REST API
 
 #### Basic Commands Section
 EXP 1:  add one ospf instance

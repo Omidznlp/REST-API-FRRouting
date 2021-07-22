@@ -1,11 +1,12 @@
 # Configuration,and Test BGP
 
 ## Configuration
-BGP daemon must be enabled before testing. To do that, `bgpd=yes` must be inserted into `/etc/frr/daemons` and then restart frr \
+BGP daemon must be enabled before testing. To do , `bgpd=no` must be changed to `bgpd=yes` into `/etc/frr/daemons` and then restart frr \
 `Note:`\
-Some parameters can not be used together. Therefore,if they are configured together, one of them would be ignored when commands are inserted into Frr.
-##Test
-BGP are divided to three section:\
+Implemented parameters are referred to in https://docs.frrouting.org/en/latest/bgp.html. 
+Please note that some parameters should not be configured together. To address, if they are configured, one of them would be ignored when commands are inserted into Frr 
+## Test
+BGP parameters are divided into three section:\
 1.BGP Base  \
 2.BGP Address Family \
 3.BGP Global Parameters \
@@ -16,7 +17,7 @@ BGP Base must be configured before two next sections
 Exp1: Insert
 
 **Note:** \
-neighbor serves two types : it has ip address or it is connected to router interface. Therefore, one of them  can be chosen for configuration. In this test, ip address of neighbor is chosen.
+Neighbor is configured in two ways: it has an IP address or it is directly connected to the interface. Therefore, one of them should be chosen for configuration. In this test, the IP address of the neighbor is chosen.
 
 ```
 $ curl -X POST -d 'as_number=1&router_id=3.3.3.3&neighbor_addr=1.1.1.1&neighbor_interface_name=&remote_as_num=2&remote_as_internal=&remote_as_external' http://localhost:8000/bgp/basic/
