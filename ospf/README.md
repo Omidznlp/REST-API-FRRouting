@@ -18,13 +18,15 @@ https://frrouting.readthedocs.io/en/latest/ospfd.html#multi-instance-support
 
 **Description:**\
 
-Base urls in this project are based on two types : \
+ OSPF is configured based on : \
+ Basic parameters:\
 `1.http://localhost:8000/ospf/Basic/ `\
+Advanced parameters:\
 `2.http://localhost:8000/ospf/advanced/` \
 `/basic` must be configured to run ospf instances \
-`/advanced` is optional \
+`/advanced` is optional 
 
-#### Basic Commands Section
+#### Basic Parameters Section
 EXP 1:  add one ospf instance
 ```
 $ curl -X POST -d 'id_instance=1&router_id=4.4.4.4&interface_name=ens192&interface_area=1' http://localhost:8000/ospf/basic/
@@ -119,15 +121,15 @@ Exp 4: Delete instance
 ```
 curl -X DELETE http://localhost:8000/ospf/basic/detail/{1}/
 ```
-#### Advanced Commands Section
+#### Advanced Parameters Section
 **Description:**\
-`/advanced/interface/`  brings more options for configuration interface \
-`/advanced/area/`  brings more options for configuration area \
+`/advanced/interface/`  brings more options for interface configuration  \
+`/advanced/area/`  brings more options for area configuration \
 `/advanced/global/`  brings more options for configuration global parameters \
 which means these options do not need to be configured for running ospf. \
-These features give more options for configuration ospf into complex scenario
+These features give more options for configuration ospf in complex scenario
 
-##### Section Interface
+##### Interface Section 
 
 Exp1: add options
 ```
@@ -222,7 +224,7 @@ Removing some commands from frrouting need to pass value of fields.Therefore,the
 
 $ curl -X DELETE -d 'name=ens192&message_digest_key=1'  http://localhost:8000/ospf/advanced/interface/1/
 ```
-##### Section Area
+##### Area Section 
 
 Exp1: add options
 ```
@@ -362,7 +364,7 @@ line vty
 end
 test#
 ```
-##### Section Global Parameters
+##### Global Parameters Section
 Exp1: add options
 ```
 $ curl -X POST -d 'id_instance=1&passive_interface=ens256&redistribute=connected&default_metric=10&timers_lsa_min_interval=20&timers_throttle_lsa_all=10&timers_throttle_spf_delay=30&timers_throttle_initial_hold_time=2&timers_throttle_max_hold_time=5&ospf_abr_type=standard&max_mertic_router_lsa_on_startup=6&max_mertic_router_lsa_on_shutdown=10&max_mertic_router_lsa_administrative=True&neighbor=1.2.3.3&neighbor_poll_interval=3&neighbor_poll_interval_priority=4&ospf_rfc1583compatibility=True&auto_cost_reference_bandwidth=100&distance=20&distance_ospf_inter_area=30&distance_ospf_intra_area=3&distance_ospf_external_area=40&default_info_originate=True&default_info_originate_always=True&default_info_metric=10&default_info_metric_type=1&default_info_route_map=test&log_adjacency_changes=True' http://localhost:8000/ospf/advanced/global/
