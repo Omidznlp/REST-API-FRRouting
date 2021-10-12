@@ -1,9 +1,9 @@
 
-# Configuration, Installation,  RUN and Test REST API
+# Configuration, Installation,  RUN and Test REST APIs
 # Description 
 FRRouting (FRR) is a free and open source Internet routing protocol suite for Linux and Unix platforms. It implements BGP, OSPF, RIP, IS-IS, PIM, LDP, BFD, Babel, PBR, OpenFabric and VRRP, with alpha support for EIGRP and NHRP https://frrouting.org/ . 
 
-This project is implemented to add REST APIs to FRRouting. Moreover, This version supports some protocols such as:\
+This project is implemented to add REST APIs to FRRouting. Moreover, it supports some protocols such as:\
 **`OSPF`**\
 **`BGP `**\
 **`RIP`**\
@@ -70,8 +70,7 @@ $./kill.sh <port number>
 REST API methodes write current configuration to configuration file.\
 
 ### Check Configuration
-All REST API methods insert some commands into `FRRouting`. Moreover, We had better make sure whether they are inserted into it. To address, we can check the result of requests by running "show running-config" command in the following manner
-to approve the functionally of REST API.
+All REST APIs methods insert some commands into `FRRouting`. To make sure whether they are inserted into it or not!. We had better check the result of requests by running "show running-config" command in the following manner to approve the functionally of REST APIs.
 ```
 $ sudo vtysh
 test# show running-config
