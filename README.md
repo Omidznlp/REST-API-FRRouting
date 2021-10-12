@@ -70,7 +70,7 @@ $./kill.sh <port number>
 REST API methodes write current configuration to configuration file.\
 
 ### Check Configuration
-All REST APIs methods insert some commands into `FRRouting`. Moreover, We had better make sure that they are inserted into it. To address, We can check the result of requests by running "show running-config" command in the following manner
+All REST API methods insert some commands into `FRRouting`. Moreover, We had better make sure whether they are inserted into it. To address, we can check the result of requests by running "show running-config" command in the following manner
 to approve the functionally of REST APIs.
 ```
 $ sudo vtysh
