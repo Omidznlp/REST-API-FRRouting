@@ -13,6 +13,8 @@ This project is implemented to add REST APIs to FRRouting. Moreover, it supports
 **`Access-List`**   
 **`Route-Map`** \
 The other protocoles will be supportted in the future.
+## Architecture
+![image012](https://user-images.githubusercontent.com/87664653/179185106-2dc10771-eaa1-4cfe-aa21-22bdff6df863.png)
 
 ### Installation
 
